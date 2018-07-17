@@ -1,0 +1,26 @@
+{
+  "name": "local-dynamodb-serverless",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "local": "concurrently --kill-others \"npm run local-dynamo\" \"npm run local-dynamo-admin\"",
+    "local-dynamo": "export SLS_DEBUG=* && serverless offline start --stage local --seed=local",
+    "local-dynamo-admin": "sleep 5 && export DYNAMO_ENDPOINT=http://localhost:8001 && dynamodb-admin"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-thin-dynamo": "^0.11.1",
+    "eslint-config-airbnb": "^16.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "dynamodb-admin": "^2.0.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "serverless-dynamodb-local": "^0.2.30",
+    "serverless-offline": "^3.21.1"
+  }
+}
