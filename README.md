@@ -1,6 +1,6 @@
 # local-dynamodb-serverless
 ## Overview
-We've been doing a lot of development recently with AWS Lambda and DynamoDB.  While there are some great tools and frameworks for describing, deploying and monitoring these services to AWS, we didn't have a great / standardized way for working with these solutions locally.
+We've been doing a lot of development recently with AWS Lambda and DynamoDB.  While there are some great tools and frameworks for describing, deploying and monitoring these services with AWS, we didn't have a great / standardized way for working with these solutions locally.
 
 This sample app demonstrates usage of the `serverless-dynamodb-local` and `serverless-offline` Serverless plugins as well as `dynamodb-admin`.
 
